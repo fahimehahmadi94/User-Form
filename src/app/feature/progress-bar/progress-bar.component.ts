@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
@@ -6,20 +6,21 @@ import {NavigationEnd, Router} from "@angular/router";
   templateUrl: './progress-bar.component.html',
   styleUrl: './progress-bar.component.css'
 })
-export class ProgressBarComponent {
+export class ProgressBarComponent implements OnInit {
   steps = [
     { label: 'اطلاعات فردی', route: '/personal-info' },
     { label: 'آپلود مدارک', route: '/upload-documents' },
     { label: 'اطلاعات تماس', route: '/contact-info' },
     { label: 'مرور اطلاعات', route: '/review-info' }
   ];
-  currentRoute: string;
+  currentRoute: string = '';
 
-  constructor(private router: Router) {
-    this.currentRoute = this.router.url;
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.currentRoute = event.url;
+        this.currentRoute = event.urlAfterRedirects;
       }
     });
   }

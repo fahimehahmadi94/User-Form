@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,9 @@ import {NavigationEnd, Router} from "@angular/router";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  currentRoute!: string;
+  title: string = 'userRegistration';
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.currentRoute = event.url;
-      }
-    });
+  constructor() {
+
   }
 }
