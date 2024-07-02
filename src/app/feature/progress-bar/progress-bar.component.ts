@@ -7,10 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProgressBarComponent {
   steps = [
-    {label: 'اطلاعات فردی', route: '/personal-info'},
-    {label: 'آپلود مدارک', route: '/upload-documents'},
-    {label: 'اطلاعات تماس', route: '/contact-info'},
-    {label: 'مرور اطلاعات', route: '/review-info'}
+    {label: 'Personal Information', route: '/personal-info'},
+    {label: 'Upload Document', route: '/upload-documents'},
+    {label: 'Contact Information', route: '/contact-info'},
+    {label: 'Review Information', route: '/review-info'}
   ];
 
   constructor() {
