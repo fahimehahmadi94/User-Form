@@ -6,3 +6,14 @@
   padding: 5px;
   margin-top: 10px;
 }
+
+.show-toast {
+  animation: showToastAnimation 2s linear 2s;
+}
+
+@keyframes showToastAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,24 +1,23 @@
 <div class="container">
   <h2>Review Information</h2>
-  <p><strong>First Name:</strong> {{ userData.firstName }}</p>
-  <p><strong>Last Name:</strong> {{ userData.lastName }}</p>
-  <p><strong>National Code:</strong> {{ userData.nationalCode }}</p>
-  <p><strong>Province:</strong> {{ userData.province }}</p>
-  <p><strong>City:</strong> {{ userData.city }}</p>
-  <p><strong>Address:</strong> {{ userData.address }}</p>
+  <p><strong>First Name:</strong> {{ userData.personalInfo.firstName }}</p>
+  <p><strong>Last Name:</strong> {{ userData.personalInfo.lastName }}</p>
+  <p><strong>National Code:</strong> {{ userData.personalInfo.nationalCode }}</p>
+  <p><strong>Province:</strong> {{ userData.contactInfo.province }}</p>
+  <p><strong>City:</strong> {{ userData.contactInfo.city }}</p>
+  <p><strong>Address:</strong> {{ userData.contactInfo.address }}</p>
   <div *ngIf="userData.document">
     <p><strong>Document:</strong></p>
     <img [src]="userData.document" alt="Document" class="uploaded-image">
   </div>
   <button (click)="onSubmit()"
-          [disabled]="!userData.firstName ||
-          !userData.lastName ||
-          !userData.nationalCode ||
-           !userData.province ||
-           !userData.city ||
-           !userData.address ||
-           !userData.document"
+          [disabled]="isCheckValidForm()"
           class="btn btn-success mt-2">
     Submit
   </button>
+  <div [ngClass]="isSuccessForm ? 'show-toast' : 'd-none'"
+       class="alert alert-success position-absolute top-0 end-0 mt-2 me-2"
+       role="alert">
+    Information submitted successfully!
+  </div>
 </div>
