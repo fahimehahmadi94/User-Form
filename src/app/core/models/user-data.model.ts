@@ -4,13 +4,28 @@ export interface PersonalInfo {
   nationalCode: string;
 }
 
-export interface DocumentData {
-  file: File;
-  previewUrl: string | ArrayBuffer | null;
-}
-
 export interface ContactInfo {
   province: string;
   city: string;
   address: string;
+}
+
+export interface User {
+  personalInfo: PersonalInfo;
+  contactInfo: ContactInfo;
+  document: File | null;
+}
+
+export const InitialUser: User = {
+  personalInfo: {
+    firstName: '',
+    lastName: '',
+    nationalCode: ''
+  },
+  contactInfo: {
+    province: '',
+    city: '',
+    address: ''
+  },
+  document: null
 }

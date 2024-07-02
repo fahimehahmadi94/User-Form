@@ -19,9 +19,9 @@ export class ContactInfoComponent implements OnInit {
   ngOnInit() {
     const userData = this.userDataService.getUserData();
     this.contactInfoForm = this.fb.group({
-      province: [userData.province || '', Validators.required],
-      city: [userData.city || '', Validators.required],
-      address: [userData.address || '', Validators.required]
+      province: [userData.contactInfo.province || '', Validators.required],
+      city: [userData.contactInfo.city || '', Validators.required],
+      address: [userData.contactInfo.address || '', Validators.required]
     });
   }
 

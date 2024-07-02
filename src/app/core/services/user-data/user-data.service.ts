@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {InitialUser, User} from "../../models/user-data.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserDataService {
-  private userData: any = {};
+  private userData: User = InitialUser;
 
   constructor() {
     if (this.isLocalStorageAvailable()) {
@@ -16,7 +17,7 @@ export class UserDataService {
   }
 
   setUserData(data: any) {
-    this.userData = { ...this.userData, ...data };
+    this.userData = {...this.userData, ...data};
     if (this.isLocalStorageAvailable()) {
       localStorage.setItem('userData', JSON.stringify(this.userData));
     }
@@ -27,7 +28,7 @@ export class UserDataService {
   }
 
   clearData() {
-    this.userData = {};
+    this.userData = InitialUser;
     if (this.isLocalStorageAvailable()) {
       localStorage.removeItem('userData');
     }

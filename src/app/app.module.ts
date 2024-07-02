@@ -18,7 +18,7 @@ import {ProgressBarComponent} from "./feature/progress-bar/progress-bar.componen
     UploadDocumentsComponent,
     ContactInfoComponent,
     ReviewInfoComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,

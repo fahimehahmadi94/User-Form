@@ -19,8 +19,8 @@ export class ReviewInfoComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.userData.firstName && this.userData.lastName && this.userData.nationalCode &&
-      this.userData.province && this.userData.city && this.userData.address &&
+    if (this.userData.personalInfo.firstName && this.userData.personalInfo.lastName && this.userData.personalInfo.nationalCode &&
+      this.userData.contactInfo.province && this.userData.contactInfo.city && this.userData.contactInfo.address &&
       this.userData.document) {
       alert('Information submitted successfully!');
       this.userDataService.clearData();

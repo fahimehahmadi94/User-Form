@@ -4,21 +4,21 @@
     <div class="form-group">
       <label for="province">Province</label>
       <input id="province" class="form-control" formControlName="province">
-      <div *ngIf="contactInfoForm.get('province')?.invalid && contactInfoForm.get('province')?.touched" class="text-danger">
+      <div *ngIf="contactInfoForm.get('contactInfo.province')?.invalid && contactInfoForm.get('contactInfo.province')?.touched" class="text-danger">
         Province is required.
       </div>
     </div>
     <div class="form-group">
       <label for="city">City</label>
       <input id="city" class="form-control" formControlName="city">
-      <div *ngIf="contactInfoForm.get('city')?.invalid && contactInfoForm.get('city')?.touched" class="text-danger">
+      <div *ngIf="contactInfoForm.get('contactInfo.city')?.invalid && contactInfoForm.get('contactInfo.city')?.touched" class="text-danger">
         City is required.
       </div>
     </div>
     <div class="form-group">
       <label for="address">Address</label>
       <input id="address" class="form-control" formControlName="address">
-      <div *ngIf="contactInfoForm.get('address')?.invalid && contactInfoForm.get('address')?.touched" class="text-danger">
+      <div *ngIf="contactInfoForm.get('contactInfo.address')?.invalid && contactInfoForm.get('contactInfo.address')?.touched" class="text-danger">
         Address is required.
       </div>
     </div>
