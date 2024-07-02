@@ -6,12 +6,12 @@ import {ContactInfoComponent} from "./feature/contact-info/contact-info.componen
 import {ReviewInfoComponent} from "./feature/review-info/review-info.component";
 
 const routes: Routes = [
-  {path: 'personal-info', component: PersonalInfoComponent},
-  {path: 'upload-documents', component: UploadDocumentsComponent},
-  {path: 'contact-info', component: ContactInfoComponent},
-  {path: 'review-info', component: ReviewInfoComponent},
-  {path: '', redirectTo: '/personal-info', pathMatch: 'full'},
-  {path: '**', redirectTo: '/personal-info'},
+  // {path: 'personal-info', component: PersonalInfoComponent},
+  // {path: 'upload-documents', component: UploadDocumentsComponent},
+  // {path: 'contact-info', component: ContactInfoComponent},
+  // {path: 'review-info', component: ReviewInfoComponent},
+  // {path: '', redirectTo: '/personal-info', pathMatch: 'full'},
+  // {path: '**', redirectTo: '/personal-info'},
 
 ];
 

@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-progress-bar',
@@ -13,6 +14,14 @@ export class ProgressBarComponent {
     {label: 'Review Information', route: '/review-info'}
   ];
 
-  constructor() {
-  }
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
+
+  constructor(private _formBuilder: FormBuilder) {}
+
 }

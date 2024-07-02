@@ -10,6 +10,12 @@ import {UploadDocumentsComponent} from "./feature/upload-documents/upload-docume
 import {ReviewInfoComponent} from "./feature/review-info/review-info.component";
 import {ProgressBarComponent} from "./feature/progress-bar/progress-bar.component";
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,9 +31,15 @@ import {ProgressBarComponent} from "./feature/progress-bar/progress-bar.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+
+    MatStepperModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })
