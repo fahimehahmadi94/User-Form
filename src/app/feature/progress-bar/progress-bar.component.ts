@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
@@ -7,29 +7,24 @@ import {NavigationEnd, Router} from "@angular/router";
   styleUrl: './progress-bar.component.css'
 })
 export class ProgressBarComponent {
-  currentStep: number = 1;
+  steps = [
+    { label: 'اطلاعات فردی', route: '/personal-info' },
+    { label: 'آپلود مدارک', route: '/upload-documents' },
+    { label: 'اطلاعات تماس', route: '/contact-info' },
+    { label: 'مرور اطلاعات', route: '/review-info' }
+  ];
+  currentRoute: string;
 
   constructor(private router: Router) {
-    this.router.events.subscribe(event => {
+    this.currentRoute = this.router.url;
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.setCurrentStep(event.url);
+        this.currentRoute = event.url;
       }
     });
   }
 
-  setCurrentStep(url: string) {
-    if (url.includes('personal-info')) {
-      this.currentStep = 1;
-    } else if (url.includes('upload-documents')) {
-      this.currentStep = 2;
-    } else if (url.includes('contact-info')) {
-      this.currentStep = 3;
-    } else if (url.includes('review-info')) {
-      this.currentStep = 4;
-    }
-  }
-
-  isCurrentStep(step: number) {
-    return this.currentStep >= step;
+  isActive(route: string): boolean {
+    return this.currentRoute === route;
   }
 }

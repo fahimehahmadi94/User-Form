@@ -57,7 +57,11 @@ export class UploadDocumentsComponent implements OnInit {
       };
       reader.readAsDataURL(this.document);
     } else {
-      this.documentError = 'Please select a document.';
+      if (this.userData.document != null) {
+        this.router.navigate(['/contact-info']).then();
+      } else {
+        this.documentError = 'Please select a document.';
+      }
     }
   }
 }

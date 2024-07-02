@@ -1,17 +1,4 @@
-<nav>
-  <ul class="nav nav-pills">
-    <li class="nav-item" [class.active]="currentRoute === '/personal-info'">
-      <a class="nav-link" routerLink="/personal-info">Personal Info</a>
-    </li>
-    <li class="nav-item" [class.active]="currentRoute === '/upload-documents'">
-      <a class="nav-link" routerLink="/upload-documents">Upload Documents</a>
-    </li>
-    <li class="nav-item" [class.active]="currentRoute === '/contact-info'">
-      <a class="nav-link" routerLink="/contact-info">Contact Info</a>
-    </li>
-    <li class="nav-item" [class.active]="currentRoute === '/review-info'">
-      <a class="nav-link" routerLink="/review-info">Review Info</a>
-    </li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<app-progress-bar></app-progress-bar>
+<div class="container mt-3">
+  <router-outlet></router-outlet>
+</div>
