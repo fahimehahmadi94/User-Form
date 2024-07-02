@@ -1,27 +1,59 @@
 <div class="container">
-  <h2>Personal Information</h2>
-  <form [formGroup]="personalInfoFG" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="firstName">First Name</label>
-      <input id="firstName" class="form-control" [formControl]="firstNameFC">
-      <div *ngIf="invalidInput(firstNameFC)" class="text-danger">
-        First Name is required.
-      </div>
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="personalInfoFG" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-2">
+          <label for="firstName">First Name</label>
+          <input id="firstName" class="form-control" [formControl]="firstNameFC">
+          <div *ngIf="invalidInput(firstNameFC)" class="text-danger">
+            First Name is required.
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" class="form-control" [formControl]="lastNameFC">
+          <div *ngIf="invalidInput(lastNameFC)" class="text-danger">
+            First Name is required.
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="nationalCode">National Code</label>
+          <input id="nationalCode" class="form-control" [formControl]="nationalCodeFC" maxlength="10">
+          <div *ngIf="invalidInput(nationalCodeFC)" class="text-danger">
+            National Code is required and must be 10 digits.
+          </div>
+        </div>
+        <div class="d-flex justify-content-md-end">
+          <button type="submit" class="btn btn-primary mt-2" [disabled]="personalInfoFG.invalid">Next</button>
+        </div>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input id="lastName" class="form-control" [formControl]="lastNameFC">
-      <div *ngIf="invalidInput(lastNameFC)" class="text-danger">
-        First Name is required.
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="nationalCode">National Code</label>
-      <input id="nationalCode" class="form-control" [formControl]="nationalCodeFC" maxlength="10">
-      <div *ngIf="invalidInput(nationalCodeFC)" class="text-danger">
-        National Code is required and must be 10 digits.
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary mt-2" [disabled]="personalInfoFG.invalid">Next</button>
-  </form>
+  </div>
 </div>
+<!--<div class="container">-->
+<!--  <h2>Personal Information</h2>-->
+<!--  <form [formGroup]="personalInfoFG" (ngSubmit)="onSubmit()">-->
+<!--    <div class="form-group">-->
+<!--      <label for="firstName">First Name</label>-->
+<!--      <input id="firstName" class="form-control" [formControl]="firstNameFC">-->
+<!--      <div *ngIf="invalidInput(firstNameFC)" class="text-danger">-->
+<!--        First Name is required.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="lastName">Last Name</label>-->
+<!--      <input id="lastName" class="form-control" [formControl]="lastNameFC">-->
+<!--      <div *ngIf="invalidInput(lastNameFC)" class="text-danger">-->
+<!--        First Name is required.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="nationalCode">National Code</label>-->
+<!--      <input id="nationalCode" class="form-control" [formControl]="nationalCodeFC" maxlength="10">-->
+<!--      <div *ngIf="invalidInput(nationalCodeFC)" class="text-danger">-->
+<!--        National Code is required and must be 10 digits.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-primary mt-2" [disabled]="personalInfoFG.invalid">Next</button>-->
+<!--  </form>-->
+<!--</div>-->
