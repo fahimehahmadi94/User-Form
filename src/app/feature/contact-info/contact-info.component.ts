@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {UserDataService} from "../services/user-data/user-data.service";
+import {UserDataService} from "../../core/services/user-data/user-data.service";
 
 @Component({
   selector: 'app-contact-info',

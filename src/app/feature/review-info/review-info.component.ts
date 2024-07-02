@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {UserDataService} from "../services/user-data/user-data.service";
 import {Router} from "@angular/router";
+import {UserDataService} from "../../core/services/user-data/user-data.service";
 
 @Component({
   selector: 'app-review-info',
@@ -10,7 +10,8 @@ import {Router} from "@angular/router";
 export class ReviewInfoComponent implements OnInit {
   userData: any;
 
-  constructor(private userDataService: UserDataService, private router: Router) {
+  constructor(private userDataService: UserDataService,
+              private router: Router) {
   }
 
   ngOnInit() {
