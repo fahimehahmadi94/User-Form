@@ -8,8 +8,8 @@ import {Component, OnInit} from '@angular/core';
 export class ProgressBarComponent {
   steps = [
     {label: 'Personal Information', route: '/personal-info'},
-    {label: 'Upload Document', route: '/upload-documents'},
     {label: 'Contact Information', route: '/contact-info'},
+    {label: 'Upload Document', route: '/upload-documents'},
     {label: 'Review Information', route: '/review-info'}
   ];
 

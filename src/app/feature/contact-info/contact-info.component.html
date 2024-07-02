@@ -1,28 +1,32 @@
 <div class="container">
-  <h2>Contact Information</h2>
-  <form [formGroup]="contactInfoFG" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="province">Province</label>
-      <input id="province" class="form-control" [formControl]="provinceFC">
-      <div *ngIf="invalidInput(provinceFC)" class="text-danger">
-        Province is required.
-      </div>
+  <div class="card w-50">
+    <div class="card-body">
+      <form [formGroup]="contactInfoFG" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-2">
+          <label for="province">Province</label>
+          <input id="province" class="form-control" [formControl]="provinceFC">
+          <div *ngIf="invalidInput(provinceFC)" class="text-danger">
+            Province is required.
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="city">City</label>
+          <input id="city" class="form-control" [formControl]="cityFC">
+          <div *ngIf="invalidInput(cityFC)" class="text-danger">
+            City is required.
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="address">Address</label>
+          <input id="address" class="form-control" [formControl]="addressFC">
+          <div *ngIf="invalidInput(addressFC)" class="text-danger">
+            Address is required.
+          </div>
+        </div>
+        <div class="d-flex justify-content-md-end">
+          <button type="submit" class="btn btn-primary mt-2" [disabled]="contactInfoFG.invalid">Next</button>
+        </div>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="city">City</label>
-      <input id="city" class="form-control" [formControl]="cityFC">
-      <div *ngIf="invalidInput(cityFC)" class="text-danger">
-        City is required.
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="address">Address</label>
-      <input id="address" class="form-control" [formControl]="addressFC">
-      <div *ngIf="invalidInput(addressFC)" class="text-danger">
-        Address is required.
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary mt-2" [disabled]="contactInfoFG.invalid">Next</button>
-  </form>
+  </div>
 </div>
-
