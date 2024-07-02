@@ -29,18 +29,10 @@ export class UploadDocumentsComponent implements OnInit {
     if (this.document) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        if (this.document?.type === 'image/png' ||
-          this.document?.type === 'image/jpg' ||
-          this.document?.type === 'image/jpeg' ||
-          this.document?.type === 'image/gif') {
-          this.documentUrl = reader.result;
-          reader.readAsDataURL(this.document);
-          this.documentError = null;
-        } else {
-          this.documentUrl = ''
-          this.documentError = 'Please upload a photo.';
-        }
-      }
+        this.documentUrl = reader.result;
+      };
+      reader.readAsDataURL(this.document);
+      this.documentError = null;
     } else {
       this.documentError = 'Please select a document.';
     }
