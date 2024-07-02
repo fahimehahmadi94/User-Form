@@ -21,6 +21,7 @@ export class UploadDocumentsComponent implements OnInit {
     this.userData = this.userDataService.getUserData();
     if (!!this.userData.document) {
       this.documentUrl = this.userData.document;
+
     }
   }
 

@@ -9,5 +9,5 @@
   <div *ngIf="documentError" class="text-danger">
     {{ documentError }}
   </div>
-  <button (click)="onSubmit()" class="btn btn-primary">Next</button>
+  <button (click)="onSubmit()"  [disabled]="!documentUrl" class="btn btn-primary">Next</button>
 </div>
