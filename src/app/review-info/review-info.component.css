@@ -1,0 +1,8 @@
+.uploaded-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid red;
+  padding: 5px;
+  margin-top: 10px;
+}

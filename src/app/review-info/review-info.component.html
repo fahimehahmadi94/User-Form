@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Review Information</h2>
+  <p><strong>First Name:</strong> {{ userData.firstName }}</p>
+  <p><strong>Last Name:</strong> {{ userData.lastName }}</p>
+  <p><strong>National Code:</strong> {{ userData.nationalCode }}</p>
+  <p><strong>Province:</strong> {{ userData.province }}</p>
+  <p><strong>City:</strong> {{ userData.city }}</p>
+  <p><strong>Address:</strong> {{ userData.address }}</p>
+  <div *ngIf="userData.document">
+    <p><strong>Document:</strong></p>
+    <img [src]="userData.document" alt="Document" class="uploaded-image">
+  </div>
+  <button (click)="onSubmit()"
+          [disabled]="!userData.firstName ||
+          !userData.lastName ||
+          !userData.nationalCode ||
+           !userData.province ||
+           !userData.city ||
+           !userData.address ||
+           !userData.document"
+          class="btn btn-success">
+    Submit
+  </button>
+</div>
