@@ -29,6 +29,10 @@ body {
   background-color: #0167cf !important;
 }
 
+.cu-btn-primary:disabled {
+  background-color: #d7e3ff !important;
+}
+
 .card {
   min-height: 350px;
 }
