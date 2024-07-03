@@ -4,49 +4,49 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <p class="h6">First Name:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ !!userData.personalInfo.firstName ? userData.personalInfo.firstName : '-' }}
             </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">Last Name: <small
-            class="text-primary-emphasis">
+            class="cu-text-primary">
             {{ !!userData.personalInfo.lastName ? userData.personalInfo.lastName : '-' }}
           </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">National Code:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ !!userData.personalInfo.nationalCode ? userData.personalInfo.nationalCode : '-' }}
             </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">Province:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ !!userData.contactInfo.province ? userData.contactInfo.province : '-' }}
             </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">City:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ !!userData.contactInfo.city ? userData.contactInfo.city : '-' }}
             </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">Address:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ !!userData.contactInfo.address ? userData.contactInfo.address : '-' }}
             </small>
           </p>
         </li>
         <li class="list-group-item">
           <p class="h6">Document:
-            <small class="text-primary-emphasis">
+            <small class="cu-text-primary">
               {{ userData.document === null ? '-' : '' }}
             </small></p>
           <ng-container *ngIf="userData.document">
@@ -57,8 +57,10 @@
         </li>
       </ul>
       <div class="d-flex justify-content-end mt-2">
-        <button type="button" class="btn btn-secondary me-2" (click)="onPrevious()">Previous</button>
-        <button type="button" class="btn btn-success"
+        <button type="button" class="cu-btn cu-btn-primary me-2" (click)="onPrevious()">
+          <i class="fa fa-arrow-left"></i> Previous
+        </button>
+        <button type="button" class="cu-btn cu-btn-primary"
                 (click)="onSubmit()"
                 [disabled]="isCheckValidForm()">
           Submit

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="card w-50">
+  <div class="card">
     <div class="card-body">
       <form [formGroup]="contactInfoFG" (ngSubmit)="onSubmit()">
         <div class="form-group mb-2">
@@ -24,8 +24,10 @@
           </div>
         </div>
         <div class="d-flex justify-content-end mt-2">
-          <button type="button" class="btn btn-secondary me-2" (click)="onPrevious()">Previous</button>
-          <button type="button" class="btn btn-primary"
+          <button type="button" class="cu-btn cu-btn-primary me-2" (click)="onPrevious()">
+            <i class="fa fa-arrow-left"></i> Previous
+          </button>
+          <button type="button" class="cu-btn cu-btn-primary"
                   (click)="onSubmit()"
                   [disabled]="contactInfoFG.invalid">
             Next

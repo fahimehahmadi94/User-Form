@@ -1,7 +1,22 @@
 <div class="container">
-  <ul class="nav nav-tabs">
-    <li class="nav-item" *ngFor="let step of steps">
-      <a class="nav-link" [routerLink]="step.route" routerLinkActive="active">{{ step.label }}</a>
-    </li>
-  </ul>
+  <div class="content-tabs mt-4">
+    <ul class="tabs nav nav-tabs">
+      <li class="nav-item" *ngFor="let item of navList">
+        <a class="nav-link" [routerLink]="item.route" routerLinkActive="active">
+          <i class="fa me-2" ngClass="{{item.icon}}"></i>
+          {{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+
+
+<!--<div class="content-tabs">-->
+<!--  <ul class="tabs">-->
+<!--    <li class="active"><a data-bs-toggle="tab"><i class="icon fa fa-search "></i><span>Search</span></a></li>-->
+<!--    <li><a data-bs-toggle="tab"><i class="icon fa fa-calendar "></i><span>Events</span></a></li>-->
+<!--    <li><a data-bs-toggle="tab"><i class="icon fa fa-users "></i><span>Faculity</span></a></li>-->
+<!--    <li><a data-bs-toggle="tab"><i class="icon fa fa-cogs "></i><span>Settings</span></a></li>-->
+<!--  </ul>-->
+<!--</div>-->

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {UserDataService} from "../../core/services/user-data/user-data.service";
 
+
 @Component({
   selector: 'app-upload-document',
   templateUrl: './upload-document.component.html',
@@ -21,7 +22,6 @@ export class UploadDocumentComponent implements OnInit {
     this.userData = this.userDataService.getUserData();
     if (!!this.userData.document) {
       this.documentUrl = this.userData.document;
-
     }
   }
 

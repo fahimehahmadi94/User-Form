@@ -1,13 +1,15 @@
+.content-tabs {
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
 .nav-link.active {
-  font-weight: bold;
-  color: blue !important;
+  font-weight: 800;
+  background-color: #005cbb;
+  color: white !important;
+
 }
-
-
-.mat-stepper-horizontal {
-  margin-top: 8px;
-}
-
-.mat-mdc-form-field {
-  margin-top: 16px;
+.nav-link{
+  color: #000000;
+  border: none;
 }
