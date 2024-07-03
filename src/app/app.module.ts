@@ -6,25 +6,19 @@ import {AppComponent} from './app.component';
 import {ContactInfoComponent} from './feature/contact-info/contact-info.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PersonalInfoComponent} from "./feature/personal-info/personal-info.component";
-import {UploadDocumentsComponent} from "./feature/upload-documents/upload-documents.component";
+import {UploadDocumentComponent} from "./feature/upload-document/upload-document.component";
 import {ReviewInfoComponent} from "./feature/review-info/review-info.component";
-import {ProgressBarComponent} from "./feature/progress-bar/progress-bar.component";
+import {TabsComponent} from "./feature/tabs/tabs.component";
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalInfoComponent,
-    UploadDocumentsComponent,
+    UploadDocumentComponent,
     ContactInfoComponent,
     ReviewInfoComponent,
-    ProgressBarComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,11 +26,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule,
     ReactiveFormsModule,
 
-    MatStepperModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration(),

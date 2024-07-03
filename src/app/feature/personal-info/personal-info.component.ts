@@ -47,7 +47,7 @@ export class PersonalInfoComponent implements OnInit {
         nationalCode: this.nationalCodeFC.value,
       }
       this.userDataService.setUserData({personalInfo});
-      this.router.navigate(['/upload-documents']).then();
+      this.router.navigate(['/contact-info']).then();
     }
   }
 

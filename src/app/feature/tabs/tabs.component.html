@@ -1,0 +1,7 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let step of steps">
+      <a class="nav-link" [routerLink]="step.route" routerLinkActive="active">{{ step.label }}</a>
+    </li>
+  </ul>
+</div>

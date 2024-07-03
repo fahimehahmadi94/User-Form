@@ -3,11 +3,11 @@ import {Router} from "@angular/router";
 import {UserDataService} from "../../core/services/user-data/user-data.service";
 
 @Component({
-  selector: 'app-upload-documents',
-  templateUrl: './upload-documents.component.html',
-  styleUrl: './upload-documents.component.css'
+  selector: 'app-upload-document',
+  templateUrl: './upload-document.component.html',
+  styleUrl: './upload-document.component.css'
 })
-export class UploadDocumentsComponent implements OnInit {
+export class UploadDocumentComponent implements OnInit {
   document: File | null = null;
   documentUrl: string | ArrayBuffer | null = null;
   documentError: string | null = null;
@@ -53,15 +53,19 @@ export class UploadDocumentsComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = () => {
         this.userDataService.setUserData({document: reader.result});
-        this.router.navigate(['/contact-info']).then();
+        this.router.navigate(['/review-info']).then();
       };
       reader.readAsDataURL(this.document);
     } else {
       if (this.userData.document != null) {
-        this.router.navigate(['/contact-info']).then();
+        this.router.navigate(['/review-info']).then();
       } else {
         this.documentError = 'Please select a document.';
       }
     }
+  }
+
+  onPrevious() {
+    this.router.navigate(['/contact-info']).then();
   }
 }

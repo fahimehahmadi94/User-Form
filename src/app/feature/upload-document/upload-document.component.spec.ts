@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProgressBarComponent } from './progress-bar.component';
+import { UploadDocumentComponent } from './upload-document.component';
 
-describe('ProgressBarComponent', () => {
-  let component: ProgressBarComponent;
-  let fixture: ComponentFixture<ProgressBarComponent>;
+describe('UploadDocumentsComponent', () => {
+  let component: UploadDocumentComponent;
+  let fixture: ComponentFixture<UploadDocumentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProgressBarComponent]
+      declarations: [UploadDocumentComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ProgressBarComponent);
+
+    fixture = TestBed.createComponent(UploadDocumentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

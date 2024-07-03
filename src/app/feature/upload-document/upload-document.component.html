@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card w-50">
+    <div class="card-body">
+      <input type="file" (change)="onFileSelected($event)">
+      <div *ngIf="documentUrl">
+        <p><strong>Document Preview:</strong></p>
+        <img [src]="documentUrl" alt="Document Preview" class="uploaded-image">
+      </div>
+      <div *ngIf="documentError" class="text-danger">
+        {{ documentError }}
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary me-2" (click)="onPrevious()">Previous</button>
+        <button type="button" class="btn btn-primary"
+                [disabled]="!documentUrl"
+                (click)="onSubmit()">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

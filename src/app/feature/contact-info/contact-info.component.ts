@@ -45,11 +45,15 @@ export class ContactInfoComponent implements OnInit {
         address: this.addressFC.value,
       }
       this.userDataService.setUserData({contactInfo});
-      this.router.navigate(['/review-info']).then();
+      this.router.navigate(['/upload-document']).then();
     }
   }
 
   invalidInput(control: FormControl): boolean {
     return control.invalid && (control.touched || control.dirty);
+  }
+
+  onPrevious() {
+    this.router.navigate(['/personal-info']).then();
   }
 }

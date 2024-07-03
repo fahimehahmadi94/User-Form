@@ -46,4 +46,7 @@ export class ReviewInfoComponent implements OnInit {
       !this.userData.document
     )
   }
+  onPrevious() {
+    this.router.navigate(['/contact-info']);
+  }
 }

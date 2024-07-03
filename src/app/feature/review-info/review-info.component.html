@@ -56,11 +56,14 @@
           </ng-container>
         </li>
       </ul>
-      <button (click)="onSubmit()"
-              [disabled]="isCheckValidForm()"
-              class="btn btn-success mt-2">
-        Submit
-      </button>
+      <div class="d-flex justify-content-end mt-2">
+        <button type="button" class="btn btn-secondary me-2" (click)="onPrevious()">Previous</button>
+        <button type="button" class="btn btn-success"
+                (click)="onSubmit()"
+                [disabled]="isCheckValidForm()">
+          Submit
+        </button>
+      </div>
       <div [ngClass]="isSuccessForm ? 'show-toast' : 'd-none'"
            class="alert alert-success position-fixed top-0 end-0 mt-2 me-2"
            role="alert">
