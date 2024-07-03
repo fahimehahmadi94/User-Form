@@ -1,8 +1,26 @@
-.uploaded-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px solid red;
-  padding: 5px;
-  margin-top: 10px;
+.box-file {
+  min-height: 250px;
+  border: 1px dashed #005cbb;
+  border-radius: 12px;
+}
+
+.cu-input-file {
+  opacity: 0;
+  z-index: 2;
+}
+
+.box-text-file {
+  z-index: 1;
+  color: #005cbb;;
+}
+
+.box-text-file > .fa-cloud-upload {
+  font-size: 40px;
+}
+
+.box-preview {
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  min-height: 200px;
 }
