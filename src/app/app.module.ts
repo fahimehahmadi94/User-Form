@@ -11,6 +11,9 @@ import {PersonalInfoComponent} from "./feature/personal-info/personal-info.compo
 import {UploadDocumentComponent} from "./feature/upload-document/upload-document.component";
 import {ReviewInfoComponent} from "./feature/review-info/review-info.component";
 import {TabsComponent} from "./feature/tabs/tabs.component";
+import {StepperComponent} from "./feature/stepper/stepper.component";
+import {MatStepperModule} from "@angular/material/stepper";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -21,15 +24,19 @@ import {TabsComponent} from "./feature/tabs/tabs.component";
     ContactInfoComponent,
     ReviewInfoComponent,
     TabsComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+
+    MatStepperModule,
   ],
   providers: [
     provideClientHydration(),
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

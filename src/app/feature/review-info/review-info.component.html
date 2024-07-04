@@ -57,12 +57,12 @@
         </li>
       </ul>
       <div class="d-flex justify-content-end mt-2">
-        <button type="button" class="cu-btn cu-btn-primary me-2" (click)="onPrevious()">
+        <button type="button" class="cu-btn cu-btn-primary me-2" (click)="onPrevious()" matStepperPrevious>
           <i class="fa fa-arrow-left"></i> Previous
         </button>
         <button type="button" class="cu-btn cu-btn-primary"
                 (click)="onSubmit()"
-                [disabled]="isCheckValidForm()">
+                [disabled]="isCheckValidForm()" >
           Submit
         </button>
       </div>
